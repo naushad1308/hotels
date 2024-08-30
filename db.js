@@ -8,8 +8,7 @@ const URL = process.env.DB_URL;
 mongoose.connect(URL, {
     ssl: true,
     tls: true,
-    bufferTimeoutMS: 30000, // Increase timeout to 30 seconds
-
+    socketTimeoutMS: 30000,
 });
 
 // Get the default connections
