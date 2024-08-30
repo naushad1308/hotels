@@ -5,7 +5,12 @@ require('dotenv').config()
 const URL = process.env.DB_URL;
 
 // mongoose.connect(URL)
-mongoose.connect(URL);
+mongoose.connect(URL, {
+    ssl: true,
+    tls: true,
+
+
+});
 
 // Get the default connections
 // Mongoose maintain the default connection object representing the mongodb connection
